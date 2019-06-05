@@ -1,0 +1,49 @@
+@startuml
+
+left to right direction
+
+
+node GlobalExceptionHandler{
+	node Controller(控制器：分发请求) {
+		
+		node ResponseFactory {
+
+		}
+		node CutomizeResponse {
+
+		}
+		CutomizeResponse <.. ResponseFactory : 生成回应实体类
+		node CutomizeException {
+
+		}
+	}
+
+	node MyBatisMapper {
+		interface MySQLMappingDao
+		interface MappingDao
+	}
+
+	node Service {
+		interface BaseDao
+		interface Dao
+		Dao -|> BaseDao
+		BaseDao -|> MySQLMappingDao
+		BaseDao -|> MappingDao
+	}
+
+
+	database MySQL {
+		folder 数据表{
+
+		}
+	}
+
+	MySQL -up- MyBatisMapper
+	node Domain实体类 {
+	
+	}
+}
+
+interface RESTful_API
+a<->b
+@enduml

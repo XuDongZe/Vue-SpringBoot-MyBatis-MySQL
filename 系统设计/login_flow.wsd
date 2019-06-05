@@ -1,0 +1,37 @@
+skinparam classFontSize 10.5
+@startuml
+start
+fork
+:用户提交登录信息;
+while (表单校验 ？) is (失败)
+:反馈信息，重新登录;
+endwhile (成功)
+
+:提交服务器验证;
+if (用户存在？) then (Yes)
+	if (密码正确？) then (Yes)
+		:登录成功，反馈用户信息;
+		:跳转至首页;
+		:用户登录信息保存至本地cookie;
+	else (No)
+		:反馈密码不正确;
+	endif
+else (no)
+	:反馈用户不存在;
+	:提示重新输入或者注册新账号;
+endif
+fork again
+:用户提交注册信息;
+while (表单校验 ？) is (失败)
+	:反馈信息，重新填写信息;
+endwhile (成功)
+
+:提交服务器验证;
+if (用户已存在？) then (Yes)
+	:提示用户已存在，重新注册;
+else (No)
+	:注册完成，跳转到登录面板;
+endif
+endfork
+stop
+@enduml

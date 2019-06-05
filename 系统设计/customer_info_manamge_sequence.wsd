@@ -1,0 +1,21 @@
+skinparam classFontSize 10.5
+@startuml
+
+actor Customer
+boundary API
+control Controller
+
+Customer -> API : 对接口发起请求
+API -> Controller : 捕获请求
+Controller -> Service : 委托服务
+Service -> MyBatis : 调用相关函数
+MyBatis -> MySQL : 数据库查询
+MySQL --> MyBatis : 查询结果
+MyBatis --> Service : 对应实体类对象
+Service --> Controller : 请求对象
+Controller --> API : 包装的响应对象
+API --> Customer : 解析后的响应
+
+database MySQL
+
+@enduml

@@ -1,0 +1,26 @@
+skinparam classFontSize 10.5
+@startuml
+
+start
+
+:用户进入题目评论列表;
+if ( 用户为题目的作者？ ) then (Yes)
+	:为用户分配所有评论的删除权限;
+endif
+fork
+if (用户发布评论？) then (Yes)
+	:为用户分配该评论的删除权限;
+endif
+fork again
+if (用户删除评论？) then (Yes)
+	if (具有该评论的删除权限) then (Yes)
+		:发送删除请求;
+	else (No)
+		:反馈误删除权限;
+	endif
+endif
+endfork
+
+stop
+
+@enduml

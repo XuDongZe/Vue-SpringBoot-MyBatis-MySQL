@@ -1,0 +1,27 @@
+// login register
+{
+  "username": "test",
+  "password": "test"
+}
+
+// post/problem
+{
+	"uid": 1,
+	"title": "post title",
+	"description": "post description",
+	"optionA": "post a",
+	"optionB": "post b",
+	"optionC": "编辑 c",
+	"optionD": "编辑D",
+	"answer": "A",
+	"difficulty": "简单",
+	"tags":
+	[
+		{
+			"name": "post tagname 1" 		
+		},
+		{
+			"name": "post tagname 1"
+		}
+	]
+}

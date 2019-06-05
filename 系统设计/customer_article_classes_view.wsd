@@ -1,0 +1,69 @@
+skinparam classFontSize 10.5
+
+@startuml
+
+left to right direction
+
+interface IBaseController {
+
+}
+
+
+class CustomerController {
+	- customer_service : 基本管理
+	- skill_service : 技能值管理
+	
+	+ Customer login()
+	+ Boolean register()
+	+ Boolean update_customer()
+	+ List get_customer_ranks() : 获取排行榜
+}
+class ArticleController {
+	- article_service : 基本管理
+	- favorite_article_service : 收藏夹服务
+	- comment_article_service : 评论服务
+
+	+ commit_to_services() : 提交具体服务
+}
+
+IBaseController <|-- ArticleController
+IBaseController <|-- CustomerController
+
+class Customer {
+	- int id
+	- Skill skill
+}
+
+class Skill {
+	- int id
+	- List skill_values
+}
+
+class Article {
+	- int id
+	- Customer author
+}
+
+class FavoriteArticle {
+	- int id
+	- int uid
+	- int aid
+}
+
+class CommentArticle {
+	- int id
+	- int from_uid
+	- int to_uid
+	- int aid
+}
+
+CustomerController ..> Customer
+Customer .down.> Skill
+
+ArticleController ..> Article
+FavoriteArticle ..> Customer
+FavoriteArticle ..> Article
+CommentArticle ..> Customer
+CommentArticle ..> Article
+
+@enduml

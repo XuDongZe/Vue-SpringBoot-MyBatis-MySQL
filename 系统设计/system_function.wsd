@@ -1,0 +1,120 @@
+skinparam classFontSize 10.5
+
+@startuml
+
+left to right direction
+
+rectangle 在线习题库系统{
+	 
+}
+
+rectangle 用户管理 {
+
+}
+
+rectangle 题目管理 {
+
+}
+
+rectangle 文章管理 {
+
+}
+
+在线习题库系统 -- 用户管理
+在线习题库系统 -- 题目管理
+在线习题库系统 -- 文章管理
+
+rectangle 登录管理 {
+
+}
+rectangle 登录{
+
+}
+rectangle 注册{
+
+}
+rectangle 注销{
+
+}
+登录管理 -- 登录
+登录管理 -- 注册
+登录管理 -- 注销
+rectangle 信息管理模块 {
+
+}
+rectangle 基本信息管理 {
+
+}
+rectangle 反馈系统 {
+
+}
+rectangle 技能值反馈 {
+
+}
+rectangle 成就值反馈 {
+
+}
+反馈系统 -- 技能值反馈
+反馈系统 -- 成就值反馈
+信息管理模块 -- 基本信息管理
+信息管理模块 -- 反馈系统
+
+用户管理 -- 登录管理
+用户管理 -- 信息管理模块
+
+rectangle 基本题目管理 {
+
+}
+
+rectangle 题目增删改查 {
+
+}
+基本题目管理 -- 题目增删改查
+
+rectangle 题目历史纪录 {
+
+}
+rectangle 错题本 {
+
+}
+rectangle 收藏夹 {
+
+}
+rectangle 提交记录 {
+
+}
+rectangle 评论记录 {
+
+}
+题目历史纪录 -- 错题本
+题目历史纪录 -- 收藏夹
+题目历史纪录 -- 提交记录
+题目历史纪录 -- 评论记录
+
+题目管理 -- 基本题目管理
+题目管理 -- 题目历史纪录
+
+rectangle 基本文章管理{
+
+}
+rectangle 文章增删改查{
+
+}
+
+基本文章管理 -- 文章增删改查
+
+rectangle 文章历史记录 {
+
+}
+rectangle 文章收藏 {
+
+}
+rectangle 文章评论 {
+
+}
+文章历史记录 -- 文章收藏
+文章历史记录 -- 文章评论
+
+文章管理 -- 基本文章管理
+文章管理 -- 文章历史记录
+@enduml

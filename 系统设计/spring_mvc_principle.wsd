@@ -1,0 +1,35 @@
+@startuml
+skinparam classFontSize 10.5
+actor 用户
+node 分发控制器DispatherServlet {
+
+}
+node View {
+
+}
+node ViewResolver {
+
+}
+node HandlerMapping {
+
+}
+node Handler {
+
+}
+node HandlerAdapter {
+
+}
+
+用户 -right-> 分发控制器DispatherServlet : 1.发起请求
+分发控制器DispatherServlet -right-> HandlerMapping : 2.请求查询Handler
+HandlerMapping --> 分发控制器DispatherServlet : 3.返回处理器执行链
+分发控制器DispatherServlet -down-> HandlerAdapter : 4.请求执行\nHandler
+HandlerAdapter -down-> Handler : 5.执行Handler
+Handler --> HandlerAdapter : 6.返回\nModelAndView
+HandlerAdapter --> 分发控制器DispatherServlet : 7.返回\nModelAndView
+分发控制器DispatherServlet -down-> ViewResolver : 8.请求解析View
+ViewResolver --> 分发控制器DispatherServlet : 9.返回View
+分发控制器DispatherServlet <--> View : 10.渲染\n视图
+分发控制器DispatherServlet -> 用户 : 11.返回响应 
+
+@enduml

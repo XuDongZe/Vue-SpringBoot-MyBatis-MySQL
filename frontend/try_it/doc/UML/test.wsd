@@ -1,0 +1,12 @@
+@startuml
+title 系统整体业务用例图
+
+left to right direction
+actor 用户
+rectangle {
+	用户 --> (个人信息管理)
+	用户 --> (题目管理)
+	用户 --> (文章管理)
+}
+
+@enduml

@@ -1,0 +1,19 @@
+@startuml
+
+start
+:切换为注册面板;
+:用户提交注册信息;
+while (表单校验 ？) is (失败)
+	:反馈信息，重新填写信息;
+endwhile (成功)
+
+:提交服务器验证;
+if (用户已存在？) then (Yes)
+	:提示用户已存在，重新注册;
+else (No)
+	:注册完成，跳转到登录面板;
+endif
+stop
+
+@enduml
+

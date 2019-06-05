@@ -1,0 +1,33 @@
+skinparam classFontSize 10.5
+
+scale 500 width
+
+@startuml
+start
+: 用户访问个人空间;
+if (管理员？) then (Yes)
+: 读取、更新权限;
+else (No)
+: 分配只读权限;
+endif
+
+: 根据用户身份显示个人信息;
+: 读取用户操作;
+if (操作超出权限？) then (No)
+: 发送请求;
+else (Yes)
+: 无权限反馈;
+stop
+endif
+
+
+: Controller根据请求进行响应;
+if ( 服务中出现异常 ) then (抛出异常)
+: 异常信息反馈;
+else (正常响应)
+: 更新数据和视图;
+endif
+
+stop
+
+@enduml

@@ -1,0 +1,45 @@
+#端口配置
+server:
+  port: 8088
+
+#jdbc配置
+spring:
+#自定义404, 当出现错误时, 直接抛出异常
+  mvc:
+    throw-exception-if-no-handler-found: true
+#不要为工程中的resources资源文件建立映射
+  resources:
+    add-mappings: false
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/tryit?serverTimezone=CTT&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: 
+
+#mybatis配置
+mybatis:
+  #加载mapper文件
+  #mapper-locations: classpath:mapper/*.xml
+  #设置实体类别名
+  type-aliases-package: com.xdz.domain
+  #加载mybatis全局配置文件
+  #config-location: classpath:mybatis/SqlMapConfig.xml
+
+#通用mapper配置
+mapper:
+  #通用mapper的类，可以多个，不要和业务dao放到一起
+  mappers: com.xdz.baseDao.IBaseDao
+  identity: MYSQL
+
+#日志配置
+logging:
+  level: 
+    com.xdz.dao: debug
+    
+#pagehleper插件
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql

@@ -1,0 +1,30 @@
+skinparam classFontSize 10.5
+
+
+@startuml
+
+start
+
+:用户编辑题目，提交更新;
+:系统抽离出题目的标签列表tags_new;
+:系统从数据库端查询原有的列表tags_old;
+fork
+while (tags_new遍历完成 ？) is (No)
+	if (新标签在tags_old中存在？) then (Yes)
+		:更新标签信息;
+	else (No)
+		:添加标签信息;
+	endif
+endwhile (Yes)
+fork again
+while (tags_old遍历完成？) is (No)
+	if (标签在tags_new中存在？) then (No)
+		:删除标签信息;
+	endif
+endwhile (Yes)
+end fork
+:省略以下部分;
+
+stop
+
+@enduml

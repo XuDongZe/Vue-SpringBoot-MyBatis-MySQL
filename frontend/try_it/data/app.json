@@ -1,0 +1,494 @@
+{
+  "ProblemList": [
+    {
+      "id": 1,
+      "title": "第一个题目",
+      "author": {},
+      "tags": [
+        "tag1",
+        "tag2"
+      ],
+      "type": "radio",
+      "description": "第一个题目题干的描述",
+      "options": [
+        "第一个选项",
+        "第二个选项",
+        "第三个选项",
+        "第四个选项"
+      ],
+      "answer": "A",
+      "difficulty": "简单",
+      "solved": 100,
+      "correctRate": 58.7,
+      "favorites": 8,
+      "supports": 16
+    },
+    {
+      "id": 2,
+      "title": "第2个题目",
+      "author": "001",
+      "tags": [
+        "tag4",
+        "tag5"
+      ],
+      "type": "radio",
+      "description": "第2个题目题干的描述",
+      "options": [
+        "第一个选项",
+        "第二个选项",
+        "第三个选项",
+        "第四个选项"
+      ],
+      "answer": "A",
+      "difficulty": "简单",
+      "solved": 45,
+      "correctRate": 58.7,
+      "favorites": 8,
+      "supports": 16
+    },
+    {
+      "id": 3,
+      "title": "第3个题目",
+      "author": "003",
+      "tags": [
+        "tag1"
+      ],
+      "type": "radio",
+      "description": "第3个题目题干的描述",
+      "options": [
+        "第一个选项",
+        "第二个选项",
+        "第三个选项",
+        "第四个选项"
+      ],
+      "answer": "A",
+      "difficulty": "正常",
+      "solved": 100,
+      "correctRate": 40.2,
+      "favorites": 8,
+      "supports": 16
+    },
+    {
+      "id": 4,
+      "title": "第4个题目",
+      "author": "002",
+      "tags": [
+        "tag3",
+        "tag2"
+      ],
+      "type": "radio",
+      "description": "第4个题目题干的描述",
+      "options": [
+        "第一个选项",
+        "第二个选项",
+        "第三个选项",
+        "第四个选项"
+      ],
+      "answer": "D",
+      "difficulty": "困难",
+      "solved": 100,
+      "correctRate": 23.7,
+      "favorites": 8,
+      "supports": 16
+    }
+  ],
+  "User": {
+    "id": "001",
+    "username": "admin",
+    "password": "123456789",
+    "sex": "man",
+    "avatar": "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
+    "achievement": 16,
+    "weekRise": 15,
+    "rankOrder": 15,
+    "problemDone": 15,
+    "supports": 15,
+    "articles": 15,
+    "SkillMeta": [
+      {
+        "data": {
+          "rows": [
+            {
+              "C/C++": 70,
+              "Linux": 30,
+              "字符串": 60,
+              "操作系统": 50,
+              "编程基础": 20,
+              "网络 基础": 80
+            }
+          ]
+        },
+        "type": "C++工程师"
+      },
+      {
+        "data": {
+          "rows": [
+            {
+              "HTML/CSS": 90,
+              "JavaScript": 50,
+              "Jquery": 30,
+              "Linux": 20,
+              "网络基础": 60
+            }
+          ]
+        },
+        "type": "前端工程师"
+      }
+    ]
+  },
+  "ProblemDoneList": [
+    1, 3
+  ],
+  "ProblemErrorList": [
+    1
+  ],
+  "SubmissionList": [
+    {
+      "id": 1,
+      "time": "2003-07-16 01:24:32",
+      "status": "error",
+      "userAnswer": "A"
+    },
+    {
+      "id": 2,
+      "time": "2003-07-16 01:52:24",
+      "status": "error",
+      "userAnswer": "B"
+    },
+    {
+      "id": 3,
+      "time": "2003-07-16 02:21:46",
+      "status": "accept",
+      "userAnswer": "D"
+    }
+  ],
+  "RankList": [
+    {
+      "id": 2,
+      "username": "xdz",
+      "achievements": 85
+    },
+    {
+      "id": 1,
+      "username": "admin",
+      "achievements": 54
+    },
+    {
+      "id": 3,
+      "username": "哈哈哈",
+      "achievements": 45
+    },
+    {
+      "id": 4,
+      "username": "东东东东泽~",
+      "achievements": 23
+    }
+  ],
+  "SolutionList": [
+    {
+      "id": 1,
+      "author": {
+        "id": "001",
+        "username": "admin",
+        "password": "123456789",
+        "sex": "man",
+        "avatar": "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
+        "achievement": 16,
+        "weekRise": 15,
+        "rankOrder": 15,
+        "problemDone": 15,
+        "supports": 15,
+        "articles": 15,
+        "SkillMeta": [
+          {
+            "data": {
+              "rows": [
+                {
+                  "C/C++": 70,
+                  "Linux": 30,
+                  "字符串": 60,
+                  "操作系统": 50,
+                  "编程基础": 20,
+                  "网络 基础": 80
+                }
+              ]
+            },
+            "type": "C++工程师"
+          },
+          {
+            "data": {
+              "rows": [
+                {
+                  "HTML/CSS": 90,
+                  "JavaScript": 50,
+                  "Jquery": 30,
+                  "Linux": 20,
+                  "网络基础": 60
+                }
+              ]
+            },
+            "type": "前端工程师"
+          }
+        ]
+      },
+      "problem": {
+        "id": 4,
+        "title": "第4个题目",
+        "author": "002",
+        "tags": [
+          "tag3",
+          "tag2"
+        ],
+        "type": "radio",
+        "description": "第4个题目题干的描述",
+        "options": [
+          "第一个选项",
+          "第二个选项",
+          "第三个选项",
+          "第四个选项"
+        ],
+        "answer": "D",
+        "difficulty": "困难", 
+        "solved": 100,
+        "correctRate": 23.7,
+        "favorites": 8,
+        "supports": 16
+      },
+      "title": "我的第一篇文章",
+      "description": null,
+      "content": "关于TCP的详细解释...",
+      "time": "2003-07-16 01:24:32",
+      "supports": 15,
+      "favorites": 3,
+      "reads": 160
+    }
+  ],
+  "CommentList": [
+    {
+      "id": 1,
+      "from": {
+          "id": "001",
+          "username": "admin",
+          "password": "123456789",
+          "sex": "man",
+          "avatar": "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
+      },
+      "to": {
+        "id": "002",
+          "username": "xdz",
+          "password": "123456789",
+          "sex": "man",
+          "avatar": "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
+      },
+      "time": "2003-07-16 01:24:32",
+      "content": "admin给xdz的第一条评论",
+      "supports": 15
+    },
+    {
+      "id": 2,
+      "from": {
+          "id": "001",
+          "username": "admin",
+          "password": "123456789",
+          "sex": "man",
+          "avatar": "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
+      },
+      "to": {
+        "id": "002",
+          "username": "xdz",
+          "password": "123456789",
+          "sex": "man",
+          "avatar": "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
+      },
+      "time": "2003-07-16 01:24:32",
+      "content": "admin给xdz的第2条评论",
+      "supports": 2
+    },
+    {
+      "id": 1,
+      "from": {
+          "id": "002",
+          "username": "xdz",
+          "password": "123456789",
+          "sex": "man",
+          "avatar": "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
+      },
+      "to": {
+        "id": "001",
+          "username": "admin",
+          "password": "123456789",
+          "sex": "man",
+          "avatar": "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
+      },
+      "time": "2003-07-16 01:24:32",
+      "content": "xdz给admin回复的第一条评论",
+      "supports": 0
+    },
+    {
+      "id": 1,
+      "from": {
+          "id": "003",
+          "username": "66666",
+          "password": "123456789",
+          "sex": "man",
+          "avatar": "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
+      },
+      "to": {
+        "id": "001",
+          "username": "admin",
+          "password": "123456789",
+          "sex": "man",
+          "avatar": "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
+      },
+      "time": "2003-07-16 01:24:32",
+      "content": "66666给admin的回复",
+      "supports": 1
+    }
+  ],
+  "RewardList": [
+    {
+      "id": 1,
+      "user": {
+        "id": "001",
+        "username": "admin",
+        "password": "123456789",
+        "sex": "man",
+        "avatar": "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
+        "achievement": 16,
+        "weekRise": 15,
+        "rankOrder": 15,
+        "problemDone": 15,
+        "supports": 15,
+        "articles": 15,
+        "SkillMeta": [
+          {
+            "data": {
+              "rows": [
+                {
+                  "C/C++": 70,
+                  "Linux": 30,
+                  "字符串": 60,
+                  "操作系统": 50,
+                  "编程基础": 20,
+                  "网络 基础": 80
+                }
+              ]
+            },
+            "type": "C++工程师"
+          },
+          {
+            "data": {
+              "rows": [
+                {
+                  "HTML/CSS": 90,
+                  "JavaScript": 50,
+                  "Jquery": 30,
+                  "Linux": 20,
+                  "网络基础": 60
+                }
+              ]
+            },
+            "type": "前端工程师"
+          }
+        ]
+      },
+      "problem": {
+        "id": 1,
+        "title": "第一个题目",
+        "author": {},
+        "tags": [
+          "tag1",
+          "tag2"
+        ],
+        "type": "radio",
+        "description": "第一个题目题干的描述",
+        "options": [
+          "第一个选项",
+          "第二个选项",
+          "第三个选项",
+          "第四个选项"
+        ],
+        "answer": "A",
+        "difficulty": "简单",
+        "solved": 100,
+        "correctRate": 58.7,
+        "favorites": 8,
+        "supports": 16
+      },
+      "rewards": 4,
+      "description": "各位大大看过来~"
+    },
+    {
+      "id": 2,
+      "user": {
+        "id": "001",
+        "username": "admin",
+        "password": "123456789",
+        "sex": "man",
+        "avatar": "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
+        "achievement": 16,
+        "weekRise": 15,
+        "rankOrder": 15,
+        "problemDone": 15,
+        "supports": 15,
+        "articles": 15,
+        "SkillMeta": [
+          {
+            "data": {
+              "rows": [
+                {
+                  "C/C++": 70,
+                  "Linux": 30,
+                  "字符串": 60,
+                  "操作系统": 50,
+                  "编程基础": 20,
+                  "网络 基础": 80
+                }
+              ]
+            },
+            "type": "C++工程师"
+          },
+          {
+            "data": {
+              "rows": [
+                {
+                  "HTML/CSS": 90,
+                  "JavaScript": 50,
+                  "Jquery": 30,
+                  "Linux": 20,
+                  "网络基础": 60
+                }
+              ]
+            },
+            "type": "前端工程师"
+          }
+        ]
+      },
+      "problem": {
+        "id": 4,
+        "title": "第4个题目",
+        "author": "002",
+        "tags": [
+          "tag3",
+          "tag2"
+        ],
+        "type": "radio",
+        "description": "第4个题目题干的描述",
+        "options": [
+          "第一个选项",
+          "第二个选项",
+          "第三个选项",
+          "第四个选项"
+        ],
+        "answer": "D",
+        "difficulty": "困难",
+        "solved": 100,
+        "correctRate": 23.7,
+        "favorites": 8,
+        "supports": 16
+      },
+      "rewards": 10,
+      "description": "10积分悬赏!"
+    }
+  ]
+}

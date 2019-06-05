@@ -1,0 +1,103 @@
+@startuml
+
+skinparam classFontSize 10.5
+
+left to right direction
+
+interface IBaseController {
+
+}
+
+
+class CustomerController {
+	- customer_service : 基本管理
+	- skill_service : 技能值管理
+	
+	+ Customer login()
+	+ Boolean register()
+	+ Boolean update_customer()
+	+ List get_customer_ranks() : 获取排行榜
+}
+'class ArticleController {
+'	- article_service : 基本管理
+'	- favorite_article_service : 收藏夹服务
+'	- comment_article_service : 评论服务
+
+'	+ commit_to_services() : 提交具体服务
+'}
+
+class ProblemController {
+	- problem_service : 基本管理
+	- tag_problem_service : 知识点服务
+	- favorite_probelm_service : 收藏夹服务
+	- submission_service : 提交记录服务
+	- error_problems_service : 错题本服务
+	- comment_problem_service : 评论服务
+
+	+ commit_to_service() : 提交具体服务
+}
+
+'IBaseController <|-- ArticleController
+IBaseController <|-- CustomerController
+IBaseController <|-- ProblemController
+
+class Problem {
+	- int id
+	- Customer author
+	- List tags
+}
+
+class Customer {
+	- int id
+	- Skill skill
+}
+
+class Skill {
+	- int id
+	- List skill_values
+}
+
+class TagProblem {
+	- int id
+	- String name
+}
+class FavoriteProblem {
+	- int id
+	- int uid
+	- int pid
+}
+
+class Submission {
+	- int id
+	- int uid
+	- int pid
+}
+
+class ErrorProblem {
+	- int id
+	- int uid
+	- int pid
+}
+
+class CommentProblem {
+	- int id
+	- int from_uid
+	- int from_pid
+	- int pid
+}
+
+FavoriteProblem ..> Problem
+FavoriteProblem ..> Customer
+Submission ..> Problem
+Submission ..> Customer
+ErrorProblem ..> Problem
+ErrorProblem ..> Customer
+CommentProblem ..> Problem
+CommentProblem ..> Customer
+
+ProblemController ..> Problem
+CustomerController ..> Customer
+Problem .down.> TagProblem
+Customer .down.> Skill
+
+@enduml

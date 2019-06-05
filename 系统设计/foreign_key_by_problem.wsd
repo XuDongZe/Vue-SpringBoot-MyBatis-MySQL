@@ -1,0 +1,19 @@
+@startuml
+skinparam classFontSize 10.5
+start
+
+:用户进入题目详情页;
+:系统捕捉请求，构造题目类对象entry;
+:系统回写标签列表到entry;
+if ( 需要作者的技能信息 ) then (Yes)
+:调用CustomerService服务查询作者;
+else (No)
+:调用CustomerDao服务查询作者;
+endif
+:系统回写作者对象到entry;
+:对entry进行统一响应包装，响应请求;
+:省略以下部分;
+
+stop
+
+@enduml

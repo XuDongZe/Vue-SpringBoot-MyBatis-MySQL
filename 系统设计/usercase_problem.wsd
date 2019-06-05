@@ -1,0 +1,30 @@
+skinparam classFontSize 10.5
+
+@startuml
+
+actor 用户
+
+
+rectangle 基本管理 {
+	用户 -up-> (修改题目)
+	用户 -up-> (删除题目)
+	用户 -up-> (增加题目)
+}
+rectangle 知识点管理 {
+	用户 -up-> (查看相关知识点)
+}
+
+rectangle 历史记录 {
+	用户 -down-> (错题本)
+	用户 -down-> (收藏夹)
+	用户 -down-> (提交记录)
+	用户 -down-> (评论记录)
+}
+rectangle 题目展示 {
+	用户 -down-> (表格展示)
+	用户 -down-> (列表展示)
+	用户 -down-> (详情展示)
+}
+
+
+@enduml

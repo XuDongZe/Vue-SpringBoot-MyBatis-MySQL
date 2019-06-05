@@ -1,0 +1,26 @@
+@startuml
+
+left to right direction
+
+node axios请求全局拦截器 {
+	node Router路由控制器 {
+		[路由-组件映射]
+	}
+
+	node 页面组件树 {
+		[路由出口]
+		[固定组件]
+	}
+
+	database Store全局状态管理 {
+		interface 全局共享的方法接口
+		folder 全局共享的变量 {
+		}
+	}
+}
+
+
+Router路由控制器 <-right-> 页面组件树
+页面组件树 <-right-> Store全局状态管理
+
+@enduml

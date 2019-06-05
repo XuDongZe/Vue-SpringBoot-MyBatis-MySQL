@@ -1,0 +1,23 @@
+skinparam classFontSize 10.5
+
+@startuml
+
+start
+fork
+:用户浏览文章;
+fork again
+:用户发表文章;
+fork again
+:用户提交题目;
+forkagain
+:用户上传题目;
+endfork
+:系统获取对应标签列表tags;
+:系统调用技能值管理服务manager;
+while (manager遍历完tags) is (false)
+	:更新与该标签关联的技能属性;
+endwhile (true)
+:略去后续流程;
+stop
+
+@enduml
